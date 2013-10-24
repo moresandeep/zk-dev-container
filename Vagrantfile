@@ -109,4 +109,5 @@ end
 Vagrant.configure("2") do |config|
   config.vm.synced_folder "/Users/scott/github.com/sclasen/zk-dev-container", "/zk-dev-container"
   config.vm.synced_folder "/Users/scott/github.com/sclasen/kafka-dev-container", "/kafka-dev-container"
+  config.vm.network "private_network", ip: "192.168.1.254"
 end
