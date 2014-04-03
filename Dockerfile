@@ -20,12 +20,10 @@ RUN apt-get install -q -y openjdk-7-jdk
 RUN mkdir -p /zookeeper/data
 RUN mkdir -p /exhibitor/bin
 
-ADD zookeeper-3.4.5.tar.gz /zookeeper/zookeeper-3.4.5.tar.gz
-#ADD http://www.gtlib.gatech.edu/pub/apache/zookeeper/zookeeper-3.4.5/zookeeper-3.4.5.tar.gz /zookeeper/zookeeper-3.4.5.tar.gz
+ADD http://www.gtlib.gatech.edu/pub/apache/zookeeper/zookeeper-3.4.5/zookeeper-3.4.5.tar.gz /zookeeper/zookeeper-3.4.5.tar.gz
 RUN $(cd /zookeeper && tar xfz zookeeper-3.4.5.tar.gz)
 
-ADD exhibitor-standalone-1.4.7.jar /exhibitor/exhibitor-standalone-1.4.7.jar
-#ADD http://ringmaster-exhibitor.s3.amazonaws.com/exhibitor-standalone-1.4.7.jar /exhibitor/exhibitor-standalone-1.4.7.jar
+ADD http://ringmaster-exhibitor.s3.amazonaws.com/exhibitor-standalone-1.4.7.jar /exhibitor/exhibitor-standalone-1.4.7.jar
 
 
 ADD exhibitor.properties /exhibitor/exhibitor.properties
