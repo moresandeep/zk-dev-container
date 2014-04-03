@@ -28,7 +28,6 @@ ADD http://ringmaster-exhibitor.s3.amazonaws.com/exhibitor-standalone-1.4.7.jar 
 
 ADD exhibitor.properties /exhibitor/exhibitor.properties
 ADD start-exhibitor.sh /exhibitor/bin/start-exhibitor.sh
-ADD pipework /pipework
 
 EXPOSE 8080 2181 2888 3888 
 CMD ["/exhibitor/bin/start-exhibitor.sh"]
