@@ -15,3 +15,14 @@ echo ruok | nc localhost 2181
 imok
 
 ```
+# Proxy Aware
+
+```
+If working behind the proxy update the following setting in the Dockerfile
+appropriately.
+
+ENV http_proxy http://example.proxy.com:123
+ENV https_proxy http://example.proxy.com:123
+
+```
+
